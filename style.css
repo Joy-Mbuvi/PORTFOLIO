@@ -1,0 +1,204 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color:lightblue;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Navigation Bar */
+nav {
+  background-color: rgb(212, 182, 192); /* Dark Blue */
+  color: #fff;
+  padding: 15px 0;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #396939;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #ffbf00; /* Bright Yellow */
+}
+
+/* About Section */
+#about {
+  background-color: #df8dd2;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+#about h1 {
+  font-size: 3rem;
+  color: #770a0a;
+}
+
+#about p {
+  font-size: 1.1rem;
+  margin: 20px 0;
+  color: #077c4f;
+}
+
+#toggleContent {
+  padding: 12px 30px;
+  background-color: #ffbf00; /* Bright Yellow */
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#toggleContent:hover {
+  background-color: #ff9900; /* Orange */
+}
+
+/* Hidden content */
+#extraContent.hidden {
+  display: none;
+  font-size: 1.1rem;
+  color: #077c4f;
+}
+
+#extraContent:not(.hidden) {
+  display: block;
+  font-size: 1.1rem;
+  color: #077c4f;
+}
+
+/* Projects Section */
+#projects {
+  background-color: #c3e0f5; /* Light Blue */
+  padding: 60px 20px;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #033464;
+  margin-bottom: 40px;
+}
+.project-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 20px; /* Space between the cards */
+  justify-items: center; /* Center each card */
+}
+
+.project-card {
+  background-color: #ebb670;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  transform: translateY(-10px);
+}
+
+.project-card h3 {
+  font-size: 1.8rem;
+  color: #388a6a;
+}
+
+.project-card p {
+  font-size: 1.1rem;
+  margin: 15px 0;
+  color: #ce4343;
+}
+
+.project-card a {
+  color: #004d99; /* Dark Blue */
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.3s ease;
+}
+
+.project-card a:hover {
+  color: #ffbf00; /* Bright Yellow */
+}
+
+/* Contact Section */
+#contact {
+  background-color: #fff;
+  padding: 60px 20px;
+}
+
+#contact h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #004d99;
+  margin-bottom: 40px;
+}
+
+#contact p {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #4446bb;
+  font-weight: bolder; 
+}
+
+.container {
+  max-width: 1200px; /* Adjust the max width */
+  margin: 0 auto; /* Center the container */
+  padding: 0 20px; /* Optional for some spacing */
+}
+
+.content p {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+footer {
+  background-color: #004d99;
+  color: #fff;
+  padding: 20px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+  }
+
+  .project-card {
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  form input, form textarea, form button {
+    width: 100%;
+  }
+}
+
